@@ -66,7 +66,7 @@ export default function HorizontalBars({
           {rows.map((r) => (
             <Cell key={r.name} fill={TONE_FILL[r.tone]} />
           ))}
-          <LabelList dataKey="value" position="right" style={LABEL_STYLE} formatter={format} />
+          <LabelList fill="var(--ink)" dataKey="value" position="right" style={LABEL_STYLE} formatter={format} />
         </Bar>
       </BarChart>
     </ResponsiveContainer>

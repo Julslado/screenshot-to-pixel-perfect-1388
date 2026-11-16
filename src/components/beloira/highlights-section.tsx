@@ -52,7 +52,7 @@ export function HighlightsSection() {
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-surface text-ink">
                     <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
                   </span>
-                  <p className="metric mt-6 text-[2.5rem] text-primary">{item.figure}</p>
+                  <p className="metric mt-6 text-[2.5rem] text-primary [font-variant-numeric:normal]">{item.figure}</p>
                   <h3 className="mt-4 text-lg font-bold leading-snug text-ink">{item.title}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-body">{item.short}</p>
 

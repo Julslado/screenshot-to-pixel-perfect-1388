@@ -28,7 +28,7 @@ export function ChartTooltip({
   active?: boolean;
   payload?: TooltipPayload[];
   label?: string;
-  unit?: string;
+  unit?: string | undefined;
 }) {
   if (!active || !payload?.length) return null;
   return (
@@ -40,5 +40,32 @@ export function ChartTooltip({
         </p>
       ))}
     </div>
+  );
+}
+
+/** X-axis tick that wraps long category names onto two centred lines. */
+export function CenteredWrapTick({
+  x,
+  y,
+  payload,
+  highlight,
+}: {
+  x?: number;
+  y?: number;
+  payload?: { value: string };
+  highlight?: string | undefined;
+}) {
+  const value = payload?.value ?? "";
+  const words = value.split(" ");
+  const lines = words.length > 1 && value.length > 10 ? [words.slice(0, -1).join(" "), words.at(-1) ?? ""] : [value];
+  const strong = value === highlight;
+  return (
+    <text x={x} y={(y ?? 0) + 14} textAnchor="middle" style={{ ...AXIS_TICK, fontWeight: strong ? 700 : 400 }}>
+      {lines.map((l, i) => (
+        <tspan key={l} x={x} dy={i === 0 ? 0 : 15} fill={strong ? "var(--ink)" : "var(--body)"}>
+          {l}
+        </tspan>
+      ))}
+    </text>
   );
 }

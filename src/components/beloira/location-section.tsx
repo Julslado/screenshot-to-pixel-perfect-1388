@@ -18,7 +18,7 @@ function SchematicMap() {
   const pin = LOCATION.pins.find((p) => p.id === selected);
 
   return (
-    <figure>
+    <figure className="relative">
       <div className="relative aspect-[5/4] w-full overflow-hidden rounded-xl border border-border bg-surface">
         <svg viewBox="0 0 500 400" className="absolute inset-0 h-full w-full" aria-hidden="true" focusable="false">
           {/* minor street grid */}
@@ -75,16 +75,16 @@ function SchematicMap() {
           );
         })}
 
-        {pin && (
-          <div
-            aria-live="polite"
-            className="absolute left-3 right-3 top-3 rounded-lg border border-border bg-background p-4 shadow-card sm:right-auto sm:max-w-[16rem]"
-          >
-            <p className={cn("text-sm font-bold", pin.primary ? "text-primary" : "text-ink")}>{pin.name}</p>
-            <p className="mt-1 text-sm leading-snug text-body">{pin.description}</p>
-          </div>
-        )}
       </div>
+      {pin && (
+        <div
+          aria-live="polite"
+          className="mt-3 rounded-lg border border-border bg-background p-4 shadow-card sm:absolute sm:left-3 sm:top-3 sm:mt-0 sm:max-w-[16rem]"
+        >
+          <p className={cn("text-sm font-bold", pin.primary ? "text-primary" : "text-ink")}>{pin.name}</p>
+          <p className="mt-1 text-sm leading-snug text-body">{pin.description}</p>
+        </div>
+      )}
       <figcaption className="mt-3 text-xs text-body">{LOCATION.mapCaption}</figcaption>
     </figure>
   );
@@ -106,7 +106,7 @@ export function LocationSection() {
               <h3 className="text-xl font-bold text-ink">{LOCATION.district.title}</h3>
               <p className="mt-3 text-body">{LOCATION.district.body}</p>
             </div>
-            <ImageSlot src={IMAGES.building} alt={IMAGES.buildingAlt} className="aspect-[16/9] h-auto" />
+            <ImageSlot src={IMAGES.building} alt={IMAGES.buildingAlt} className="aspect-[21/9] h-auto" />
             <div className="card-base p-6">
               <h3 className="text-sm font-bold uppercase tracking-[0.12em] text-ink">{LOCATION.factsTitle}</h3>
               <ul className="mt-5 flex flex-col gap-4">

@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All page copy and figures live in typed constants in `src/data/beloira.ts`; components only read from it, so text edits happen in one place.
+- Image slots are single constants (`IMAGES` in the data file); a `null` slot renders a neutral placeholder, so real photos can be swapped in without touching components.
+- The Beloira page is one long anchor-scrolling page by explicit brief (sticky nav with section ids), not separate routes.
+- Charts (Recharts) are lazy-loaded behind `ClientOnly` + `Suspense` to keep them out of SSR and the initial bundle; each chart has an sr-only data table.
+- The NDA form and data-room gating are client-side simulations (React state only, nothing stored or sent); they must be wired to a secure server workflow before real use.

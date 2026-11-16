@@ -122,7 +122,7 @@ export function MarketSection() {
                       <ChartTable tab={k} />
                     </figure>
 
-                    <div className="flex flex-col lg:col-span-5">
+                    <div className="flex flex-col gap-8 lg:col-span-5">
                       <dl className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
                         {tab.metrics.map((m) => (
                           <div key={m.figure} className="border-t border-border pt-5">
@@ -131,7 +131,7 @@ export function MarketSection() {
                           </div>
                         ))}
                       </dl>
-                      <p className="mt-8 border-l-2 border-primary pl-4 text-lg font-bold leading-snug text-ink lg:mt-auto">
+                      <p className="border-l-2 border-primary pl-4 text-lg font-bold leading-snug text-ink lg:mt-auto">
                         {tab.takeaway}
                       </p>
                     </div>

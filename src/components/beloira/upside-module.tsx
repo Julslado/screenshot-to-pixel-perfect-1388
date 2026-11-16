@@ -34,7 +34,7 @@ export function UpsideModule() {
               max={UPSIDE.max}
               step={UPSIDE.step}
               value={[pct]}
-              onValueChange={(v) => setPct(v[0])}
+              onValueChange={(v) => setPct(v[0] ?? UPSIDE.defaultPct)}
               aria-labelledby="upside-label"
               thumbLabel={UPSIDE.sliderLabel}
               thumbValueText={`${pct}% let, ${label} a year`}

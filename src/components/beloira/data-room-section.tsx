@@ -57,13 +57,13 @@ function PhaseToggle({ phase, onChange }: { phase: Phase; onChange: (p: Phase) =
 function PricingTeaser() {
   const { ndaRequested, openNda } = useAccess();
   return (
-    <div className="card-base relative overflow-hidden p-6 sm:p-8">
+    <div className="card-base relative min-h-[22rem] overflow-hidden p-6 sm:p-8">
       <p className="eyebrow text-primary">
         {ndaRequested ? DATA_ROOM.pricing.unlockedLabel : DATA_ROOM.pricing.lockedLabel}
       </p>
       <p
         className={cn(
-          "mt-4 text-lg leading-relaxed text-ink transition-[filter] duration-500",
+          "mt-6 text-lg leading-relaxed text-ink transition-[filter] duration-500",
           !ndaRequested && "locked-blur",
         )}
         aria-hidden={!ndaRequested}

@@ -26,7 +26,7 @@ export function HeroSection() {
       <div className="container-page flex flex-1 flex-col justify-center pb-10 pt-16 lg:pb-14 lg:pt-24">
         <div className="max-w-3xl">
           <p className="eyebrow text-ink-foreground/80">
-            <span className="mr-3 inline-block h-px w-8 translate-y-[-3px] bg-primary align-middle" aria-hidden="true" />
+            <span className="mr-3 hidden h-px w-8 sm:inline-block translate-y-[-3px] bg-primary align-middle" aria-hidden="true" />
             {HERO.eyebrow}
           </p>
           <h1 id="hero-title" className="text-display mt-6">
@@ -66,7 +66,7 @@ export function HeroSection() {
                 i >= 2 && "sm:border-t lg:border-t-0",
               )}
             >
-              <p className="metric text-[2.5rem] lg:text-[2.75rem] xl:text-5xl">
+              <p className="metric whitespace-nowrap text-[2.5rem] lg:text-[2.25rem] xl:text-[2.75rem]">
                 {metric.kind === "number" ? (
                   <>
                     {metric.prefix}

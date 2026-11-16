@@ -46,7 +46,7 @@ const defaults: FormValues = {
   principal: false as unknown as true,
 };
 
-function FieldError({ id, message }: { id: string; message?: string }) {
+function FieldError({ id, message }: { id: string; message?: string | undefined }) {
   if (!message) return null;
   return (
     <p id={id} className="mt-1.5 text-sm font-medium text-destructive">
