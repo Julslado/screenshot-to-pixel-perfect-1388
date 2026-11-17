@@ -14,7 +14,7 @@ export const SITE = {
 
 /** Image slots. Set a path (e.g. "/images/beloira-facade.jpg") to swap in real photography. */
 export const IMAGES = {
-  hero: "/images/fondoweb.svg",
+  hero: "/images/fondoweb2.svg",
   heroAlt: "Abstract illustration of a modern glass office facade",
   building: null as string | null,
   buildingAlt: "Building image placeholder",
