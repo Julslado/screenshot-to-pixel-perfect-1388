@@ -27,7 +27,7 @@ export default function OccupiersChart() {
         </Bar>
         <Bar dataKey="gradeA" name="Grade A/B+" radius={[4, 4, 0, 0]} maxBarSize={44} isAnimationActive={animate}>
           {data.map((d) => (
-            <Cell key={d.phase} fill={d.highlight ? "var(--primary)" : "var(--ink)"} />
+            <Cell key={d.phase} fill={d.highlight ? "var(--primary)" : "var(--teal)"} />
           ))}
           <LabelList fill="var(--ink)" dataKey="gradeA" position="top" style={LABEL_STYLE} />
         </Bar>

@@ -50,6 +50,7 @@
   --color-ink-foreground: var(--ink-foreground);
   --color-surface: var(--surface);
   --color-body: var(--body);
+  --color-teal: var(--teal);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -71,6 +72,7 @@
   --grey-mid: oklch(0.543 0.01 248); /* #6B7075 */
   --grey-border: oklch(0.921 0.005 258.3); /* #E3E5E8 */
   --brand: oklch(0.2382 0.075 285.9); /* #1D1740 */
+  --teal: #0094b3; /* secondary accent: occupiers chart Grade A/B+ bars, current process step */
 
   /* Semantic tokens */
   --background: var(--white);

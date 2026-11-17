@@ -25,13 +25,13 @@ export function ProcessSection() {
                 aria-current={step.current ? "step" : undefined}
                 className={cn(
                   "card-base relative flex h-full gap-5 p-5 lg:flex-col lg:p-6",
-                  step.current && "border-primary",
+                  step.current && "border-teal",
                 )}
               >
                 <span
                   className={cn(
                     "metric relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-base",
-                    step.current ? "bg-primary text-primary-foreground" : "bg-ink text-ink-foreground",
+                    step.current ? "bg-teal text-primary-foreground" : "bg-ink text-ink-foreground",
                   )}
                   aria-hidden="true"
                 >
@@ -44,7 +44,7 @@ export function ProcessSection() {
                       {step.name}
                     </h3>
                     {step.current && (
-                      <span className="eyebrow rounded-full bg-primary px-2.5 py-1 text-primary-foreground">
+                      <span className="eyebrow rounded-full bg-teal px-2.5 py-1 text-primary-foreground">
                         {PROCESS.currentBadge}
                       </span>
                     )}

@@ -67,7 +67,7 @@ function Legend({ tab }: { tab: TabKey }) {
         <span className="h-2.5 w-2.5 rounded-sm bg-body/45" /> All grades
       </li>
       <li className="flex items-center gap-2">
-        <span className="h-2.5 w-2.5 rounded-sm bg-ink" /> Grade A/B+
+        <span className="h-2.5 w-2.5 rounded-sm bg-teal" /> Grade A/B+
       </li>
       <li className="flex items-center gap-2">
         <span className="h-2.5 w-2.5 rounded-sm bg-primary" /> Grade A/B+, Phase 2
