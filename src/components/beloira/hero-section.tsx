@@ -26,7 +26,7 @@ export function HeroSection() {
       <div className="container-page flex flex-1 flex-col justify-center pb-10 pt-16 lg:pb-14 lg:pt-24">
         <div className="max-w-3xl">
           <p className="eyebrow text-ink-foreground/80">
-            <span className="mr-3 hidden h-px w-8 sm:inline-block translate-y-[-3px] bg-primary align-middle" aria-hidden="true" />
+            <span className="mr-3 hidden h-px w-8 sm:inline-block translate-y-[-3px] bg-ink-foreground/60 align-middle" aria-hidden="true" />
             {HERO.eyebrow}
           </p>
           <h1 id="hero-title" className="text-display mt-6">
@@ -34,7 +34,11 @@ export function HeroSection() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-foreground/85 md:text-xl">{HERO.subtitle}</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" onClick={openNda}>
+            <Button
+              size="lg"
+              className="bg-ink-foreground text-ink hover:bg-ink-foreground/90"
+              onClick={openNda}
+            >
               {CTA.nda}
             </Button>
             <Button size="lg" variant="outline-light" onClick={() => toast(CTA.teaserToast)}>

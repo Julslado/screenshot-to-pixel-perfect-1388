@@ -11,7 +11,8 @@
 /*
  * Edificio Beloira design system.
  * Palette is fixed by the brief: white, light grey, dark grey (ink), mid grey, border grey,
- * corporate red. No other colours. Red is reserved for CTAs, key figures and active states.
+ * deep navy accent (#1D1740, supplied by the client in place of the original corporate red).
+ * No other colours. The accent is reserved for CTAs, key figures and active states.
  */
 
 @theme inline {
@@ -69,7 +70,7 @@
   --grey-dark: oklch(0.296 0.005 248); /* #2B2D2F */
   --grey-mid: oklch(0.543 0.01 248); /* #6B7075 */
   --grey-border: oklch(0.921 0.005 258.3); /* #E3E5E8 */
-  --red: oklch(0.579 0.234 23.9); /* #E4002B */
+  --brand: oklch(0.2382 0.075 285.9); /* #1D1740 */
 
   /* Semantic tokens */
   --background: var(--white);
@@ -83,7 +84,7 @@
   --card-foreground: var(--grey-dark);
   --popover: var(--white);
   --popover-foreground: var(--grey-dark);
-  --primary: var(--red);
+  --primary: var(--brand);
   --primary-foreground: var(--white);
   --secondary: var(--grey-light);
   --secondary-foreground: var(--grey-dark);
@@ -91,13 +92,13 @@
   --muted-foreground: var(--grey-mid);
   --accent: var(--grey-light);
   --accent-foreground: var(--grey-dark);
-  --destructive: var(--red);
+  --destructive: var(--brand);
   --destructive-foreground: var(--white);
   --border: var(--grey-border);
   --input: var(--grey-border);
-  --ring: var(--red);
+  --ring: var(--brand);
 
-  --chart-1: var(--red);
+  --chart-1: var(--brand);
   --chart-2: var(--grey-dark);
   --chart-3: var(--grey-mid);
   --chart-4: var(--grey-border);
